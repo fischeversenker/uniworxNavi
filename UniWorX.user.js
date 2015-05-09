@@ -8,6 +8,8 @@
 // @require     http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
 // ==/UserScript==
 
+this.$ = this.jQuery = jQuery.noConflict(true); // avoiding conflicts with uniworx' jquery
+
 var uniworx = function($){
 	
 	// ---------------------------------------------------------
@@ -105,8 +107,8 @@ var uniworx = function($){
 			$.each($activeItems, function(i){
 				var as = $(this).find("a[href$=\""+urlAdapter.getCourseFromUrl(window.location.href)+"\"]");
 				if(as.length > 0){
-					$($activeItems[i]).css({backgroundColor: backgroundActiveItem});
-					$($activeItems[i].nextSibling).css({backgroundColor: backgroundActiveItem});
+					$($activeItems[i]).css({backgroundColor: backgroundActiveItem, borderRight: "5px solid black"});
+					$($activeItems[i].nextSibling).css({backgroundColor: backgroundActiveItem, borderRight: "5px solid black"});
 				}
 			});
 		},
