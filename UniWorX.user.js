@@ -8,7 +8,8 @@
 // @require     http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
 // ==/UserScript==
 
-var uniworx = function($){
+(function(){
+	var uniworx = function($){
 	
 	// ---------------------------------------------------------
 	// Definitionen
@@ -175,3 +176,4 @@ if (typeof jQuery === "function") {
 }	else {
 	add_jQuery (uniworx, "1.7.2");
 }
+})();
