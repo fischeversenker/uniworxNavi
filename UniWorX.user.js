@@ -40,14 +40,6 @@ var uniworx = function($){
 	// ... bis hier.
 	
 	var knownActions = {
-				start: {
-					action: "uniworxStudentHome",
-					title: "Startseite",
-				},
-				kurs: {
-					action: "uniworxCourseWelcome",
-					title: "Veranstaltung",
-				},
 				abgaben: {
 					action: "uniworxSheetListUser",
 					title: "Abgaben",
@@ -62,7 +54,7 @@ var uniworx = function($){
 				},
 	};
 
-	var colorActiveItem = $(".navButton").css("background-color");
+	var backgroundActiveItem = $(".navButton").css("background-color");
 	
 	// ---------------------------------------------------------
 	// Pseudo Static Class uniworxController
@@ -79,7 +71,7 @@ var uniworx = function($){
 				var mI = {
 					domEle: this,
 					course: course,
-					actions: urlAdapter.getActionsForCourse(course),
+					actions: uniworxController.getActionsForCourse(course),
 					title: $mIa[0].text,
 				}
 				menuItems.push(mI);
@@ -96,13 +88,25 @@ var uniworx = function($){
 			return $ul;
 		},
 		
+		getActionsForCourse: function(course){
+			var actions = [];
+			if(knownCourses[course] != null){
+				$.each(knownCourses[course].actions, function(i){
+					if(knownActions[this] != null){
+						actions.push(knownActions[this]);
+					}
+				});
+			}
+			return actions;
+		},
+		
 		beautifyNavi: function(){
 			var $activeItems = $("#menu h2:not(.semester):not(.old)");
 			$.each($activeItems, function(i){
 				var as = $(this).find("a[href$=\""+urlAdapter.getCourseFromUrl(window.location.href)+"\"]");
 				if(as.length > 0){
-					$($activeItems[i]).css({backgroundColor: colorActiveItem});
-					$($activeItems[i].nextSibling).css({backgroundColor: colorActiveItem});
+					$($activeItems[i]).css({backgroundColor: backgroundActiveItem});
+					$($activeItems[i].nextSibling).css({backgroundColor: backgroundActiveItem});
 				}
 			});
 		},
@@ -122,18 +126,6 @@ var uniworx = function($){
 	// ---------------------------------------------------------
 
 	var urlAdapter = {
-		
-		getActionsForCourse: function(course){
-			var actions = [];
-			if(knownCourses[course] != null){
-				$.each(knownCourses[course].actions, function(i){
-					if(knownActions[this] != null){
-						actions.push(knownActions[this]);
-					}
-				});
-			}
-			return actions;
-		},
 		
 		getCourseFromUrl: function(url){
 			var currId = -1;
