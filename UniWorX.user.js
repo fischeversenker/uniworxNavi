@@ -4,10 +4,11 @@
 // @description Enhanced navigation for UniWorX
 // @include     https://uniworx.ifi.lmu.de/*
 // @version     0.4
-// @grant       none
+// @grant       unsafeWindow
 // @require     //ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
 // ==/UserScript==
 
+this.$ = this.jQuery = jQuery.noConflict(true);
 
 // Revealing Module UniWorXNavi
 var UniWorXNavi = (function($){
