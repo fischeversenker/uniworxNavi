@@ -8,8 +8,6 @@
 // @require     http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
 // ==/UserScript==
 
-(function(){
-	
   var uniworx = function($){
 		
 		// ---------------------------------------------------------
@@ -182,4 +180,3 @@
 		add_jQuery (uniworx, "1.7.2"); // alternative, loading jQuery first
 	}
 	
-})();
