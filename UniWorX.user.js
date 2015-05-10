@@ -8,6 +8,7 @@
 // @require     //ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
 // ==/UserScript==
 
+// to avoid conflicts with Tampermonkey
 this.$ = this.jQuery = jQuery.noConflict(true);
 
 // Revealing Module UniWorXNavi
@@ -57,7 +58,7 @@ var UniWorXNavi = (function($){
 				},
 	};
 
-	var backgroundActiveItem = $(".navButton").css("background-color");
+	var backgroundColorActiveItem = $(".navButton").css("background-color");
 	
 	// ---------------------------------------------------------
 	// Pseudo Static Class uniworxController
@@ -112,8 +113,8 @@ var UniWorXNavi = (function($){
 			$.each($activeItems, function(i){
 				var as = $(this).find("a[href$=\""+urlAdapter.getCourseFromUrl(window.location.href)+"\"]");
 				if(as.length > 0){
-					$($activeItems[i]).css({backgroundColor: backgroundActiveItem, borderRight: "5px solid #888"});
-					$($activeItems[i].nextSibling).css({backgroundColor: backgroundActiveItem, borderRight: "5px solid #888"});
+					$($activeItems[i]).css({backgroundColor: backgroundColorActiveItem, borderRight: "5px solid #888"});
+					$($activeItems[i].nextSibling).css({backgroundColor: backgroundColorActiveItem, borderRight: "5px solid #888"});
 				}
 			});
 		},
@@ -158,7 +159,7 @@ var UniWorXNavi = (function($){
 
 })(jQuery);
 
-// calling the module on DomReady
+// calling the module on jQuery's DomReady
 jQuery(function(){
 	UniWorXNavi.magic();
 });
