@@ -120,7 +120,6 @@ var UniWorXNavi = (function($){
 		
 		// starting point
 		magic: function(){
-			console.log("making the magic happen...");
 			var menuItems = uniworxController.getMenuItemsFromDom();
 			$.each(menuItems, function(i){
 				$(this.domEle).after(uniworxController.getMenuItemDom(this));
