@@ -40,6 +40,10 @@ var UniWorXNavi = (function($){
 					title: "Rechnerarchitektur",
 					actions: ["gruppen", "abgaben", "klausuren"],
 				},
+				389: {
+					title: "Arbeitskreis Digitalfotografie",
+					actions: [],
+				},
 	};
 	// ... .
 	
