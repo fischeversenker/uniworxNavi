@@ -42,7 +42,7 @@ var UniWorXNavi = (function($){
 				},
 				389: {
 					title: "Arbeitskreis Digitalfotografie",
-					actions: ["-"],
+					actions: ["none"],
 				},
 	};
 	// ... .
@@ -60,7 +60,7 @@ var UniWorXNavi = (function($){
 					action: "uniworxExamListUser",
 					title: "Klausuren",
 				},
-				-: {
+				none: {
 					action: "#",
 					title: "<em>Keine weiteren Optionen</em>",
 				},
