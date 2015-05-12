@@ -61,7 +61,7 @@ var UniWorXNavi = (function($){
 					title: "Klausuren",
 				},
 				none: {
-					action: "#",
+					action: "uniworxCourseSelect",
 					title: "<em>Keine weiteren Optionen</em>",
 				},
 	};
