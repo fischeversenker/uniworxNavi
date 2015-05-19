@@ -3,7 +3,7 @@
 // @namespace   de.fischeversenker.uniworx
 // @description Enhanced navigation for UniWorX
 // @include     https://uniworx.ifi.lmu.de/*
-// @version     0.4
+// @version     0.6
 // @grant       unsafeWindow
 // @require     //ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
 // ==/UserScript==
@@ -68,6 +68,12 @@ var UniWorXNavi = (function($){
 
 	var backgroundColorActiveItem = $(".navButton").css("background-color");
 	
+  function stripPrecedingSlash(str) {
+    if(str.substr(0,1) == '/') {
+      return str.substr(1);
+    }
+    return str;
+  }
 	// ---------------------------------------------------------
 	// Pseudo Static Class uniworxController
 	// ---------------------------------------------------------
@@ -91,6 +97,30 @@ var UniWorXNavi = (function($){
 			});
 			return menuItems;
 		},
+    
+
+    
+    getOtherMenuEntries: function() {
+        $("#menu a[href*="+knownActions.abgaben.action+"]:first-child").each(function(index, element) {
+        element = $(element);
+        $.ajax({
+          url: "https://uniworx.ifi.lmu.de/" + stripPrecedingSlash(element.attr("href")),
+          type: "GET",
+          dataType: "html",
+          success: function(d) {
+              var $td = $($($($(d).get(37)).find("#content .realtable.sortable").get(0)).find("tbody td:first-child")); // 37 sehr vage! Unbedingt anpassen!
+              var spans = $td.find("span");
+              if(spans.length > 0) {
+                  var span = $(spans).get(1);
+                  $(span).css({"font-size":"1em", "font-weight":"bold", "font-family": "Helvetica, Arial, Verdana, sans-serif", "padding-left":"140px"}).insertBefore(element[0].parentElement.parentElement);
+              }
+          },
+          error: function(a,b,c) {
+            console.log(a);
+          },
+        });
+      });
+    },
 		
 		// returns DOM element representing menuItem-Obejct
 		getMenuItemDom: function(menuItem){
@@ -134,6 +164,7 @@ var UniWorXNavi = (function($){
 				$(this.domEle).after(uniworxController.getMenuItemDom(this));
 			});
 			uniworxController.beautifyNavi();
+      uniworxController.getOtherMenuEntries();
 		},
 	};
 
