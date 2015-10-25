@@ -44,6 +44,14 @@ var UniWorXNavi = (function($){
 					title: "Arbeitskreis Digitalfotografie",
 					actions: ["none"],
 				},
+        			464: {
+			                title: "Systempraktikum",
+			                actions: ["none"],
+			        },
+			        449: {
+				        title: "Betriebssysteme",
+				        actions: ["gruppen", "abgaben", "klausuren"],
+			        },
 	};
 	// ... .
 	
