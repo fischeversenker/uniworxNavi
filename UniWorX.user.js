@@ -46,7 +46,7 @@ var UniWorXNavi = (function($){
 				},
         			464: {
 			                title: "Systempraktikum",
-			                actions: ["none"],
+			                actions: ["gruppen"],
 			        },
 			        449: {
 				        title: "Betriebssysteme",
