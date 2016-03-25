@@ -52,6 +52,14 @@ var UniWorXNavi = (function($){
 				        title: "Betriebssysteme",
 				        actions: ["gruppen", "abgaben", "klausuren"],
 			        },
+			        516: {
+			        	title: "Theoretische Informatik für Medieninformatiker",
+			        	actions: ["abgabgen", "klausuren"],
+			        },
+			        551: {
+			        	title: "Rechnernetze und verteilte Systeme",
+			        	actions: ["gruppen", "abgaben", "klausuren"],
+			        },
 	};
 	// ... .
 	
