@@ -3,7 +3,7 @@
 // @namespace   de.fischeversenker.uniworx
 // @description Enhanced navigation for UniWorX
 // @include     https://uniworx.ifi.lmu.de/*
-// @version     0.72
+// @version     0.73
 // @grant       unsafeWindow
 // @require     //ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
 // ==/UserScript==
@@ -54,7 +54,7 @@ var UniWorXNavi = (function($){
 			        },
 			        516: {
 			        	title: "Theoretische Informatik für Medieninformatiker",
-			        	actions: ["abgabgen", "klausuren"],
+			        	actions: ["abgaben", "klausuren"],
 			        },
 			        551: {
 			        	title: "Rechnernetze und verteilte Systeme",
