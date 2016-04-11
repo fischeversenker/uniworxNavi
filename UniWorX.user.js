@@ -3,7 +3,7 @@
 // @namespace   de.fischeversenker.uniworx
 // @description Enhanced navigation for UniWorX
 // @include     https://uniworx.ifi.lmu.de/*
-// @version     0.73
+// @version     0.74
 // @grant       unsafeWindow
 // @require     //ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
 // ==/UserScript==
@@ -60,6 +60,10 @@ var UniWorXNavi = (function($){
 			        	title: "Rechnernetze und verteilte Systeme",
 			        	actions: ["gruppen", "abgaben", "klausuren"],
 			        },
+			        533: {
+			        	title: "Algorithmen und Datenstrukturen",
+			        	actions: ["gruppen", "abgaben", "klausuren"],
+			        }
 	};
 	// ... .
 	
