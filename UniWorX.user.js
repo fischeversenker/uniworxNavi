@@ -63,6 +63,10 @@ var UniWorXNavi = (function($){
 			        533: {
 			        	title: "Algorithmen und Datenstrukturen",
 			        	actions: ["gruppen", "abgaben", "klausuren"],
+			        },
+			        556: {
+			        	title: "Computergrafik I",
+			        	actions: ["gruppen", "abgaben", "klausuren"],
 			        }
 	};
 	// ... .
