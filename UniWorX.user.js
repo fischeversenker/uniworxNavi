@@ -3,7 +3,7 @@
 // @namespace   de.fischeversenker.uniworx
 // @description Enhanced navigation for UniWorX
 // @include     https://uniworx.ifi.lmu.de/*
-// @version     0.75
+// @version     0.76
 // @grant       unsafeWindow
 // @require     //ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
 // ==/UserScript==
@@ -131,17 +131,19 @@ var UniWorXNavi = (function($){
 			        $.ajax({
 			          	url: "https://uniworx.ifi.lmu.de/" + stripPrecedingSlash(element.attr("href")),
 			          	type: "GET",
-			          	dataType: "html",
+			          	dataType: "text",
 			          	success: function(d) {
-		              			var $td = $($($($(d).get(37)).find("#content .realtable.sortable").get(0)).find("tbody td:first-child")); // 37 sehr vage! Unbedingt anpassen!
+                                		d = d.replace(/(^<\?xml(?:.|\n|\f|\s|\r)*?<body>)/, '').replace(/(<\/body>.*)/, ''); // remove everything outside of <body>
+                                		var $td = $(d);
+		              			$td = $td.find("#content .realtable.sortable").find("tbody td:first-child");
 		              			var spans = $td.find("span");
 		        			if(spans.length > 0) {
 		                  			var span = $(spans).get(1);
-		                  			$(span).css({"font-size":"1em", "font-weight":"bold", "font-family": "Helvetica, Arial, Verdana, sans-serif", "padding-left":"140px"}).insertBefore(element[0].parentElement.parentElement);
+		                  			$(span).css({"font-size":"1em", "font-weight":"bold", "font-family": "Helvetica, Arial, Verdana, sans-serif", "float": "right"}).insertBefore(element[0].parentElement.parentElement);
 		              			}
 		          		},
 		          		error: function(a,b,c) {
-		            			console.log(a);
+		            			console.log("error", a);
 		          		},
 		        	});
 	      		});
