@@ -67,7 +67,19 @@ var UniWorXNavi = (function($){
 			        556: {
 			        	title: "Computergrafik I",
 			        	actions: ["gruppen", "abgaben", "klausuren"],
-			        }
+			        },
+				624: {
+					title: "Praktikum Entwicklung Mediensysteme",
+					actions: ["abgaben"],
+				},
+				587: {
+					title: "Softwaretechnik",
+					actions: ["gruppen", "abgaben", "klausuren"],
+				},
+				616: {
+					title: "Datenbanksysteme I",
+					actions: ["gruppen", "abgaben", "klausuren"],
+				},
 	};
 	// ... .
 	
