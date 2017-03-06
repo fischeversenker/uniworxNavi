@@ -3,7 +3,7 @@
 // @namespace   de.fischeversenker.uniworx
 // @description Enhanced navigation for UniWorX
 // @include     https://uniworx.ifi.lmu.de/*
-// @version     1.0.0
+// @version     1.0.1
 // @grant       unsafeWindow
 // @require     //ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
 // ==/UserScript==
@@ -13,7 +13,7 @@ this.$ = this.jQuery = jQuery.noConflict(true);
 
 // Revealing Module UniWorXNavi
 var UniWorXNavi = (function($){
-	
+
 	// ---------------------------------------------------------
 	// Definitions
 	// ---------------------------------------------------------
@@ -67,6 +67,10 @@ var UniWorXNavi = (function($){
 			        556: {
 			        	title: "Computergrafik I",
 			        	actions: ["gruppen", "abgaben", "klausuren"],
+			        },
+			        588: {
+			        	title: "Juristisches IT-Projektmanagement",
+			        	actions: ["klausuren"],
 			        },
 				624: {
 					title: "Praktikum Entwicklung Mediensysteme",
