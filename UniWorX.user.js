@@ -87,6 +87,7 @@ var UniWorXNavi = (function($){
 				718: {
 					title: "Interaction Design",
 					actions: ["abgaben"],
+				}
 	};
 	// ... .
 	
