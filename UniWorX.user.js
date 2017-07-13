@@ -3,7 +3,7 @@
 // @namespace   de.fischeversenker.uniworx
 // @description Enhanced navigation for UniWorX
 // @include     https://uniworx.ifi.lmu.de/*
-// @version     1.0.4
+// @version     1.0.5
 // @grant       unsafeWindow
 // @require     //ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
 // ==/UserScript==
@@ -90,7 +90,7 @@ var UniWorXNavi = (function($){
 				},
 				718: {
 					title: "Interaction Design",
-					actions: ["abgaben"],
+					actions: ["abgaben", "klausuren"],
 				}
 	};
 	// ... .
