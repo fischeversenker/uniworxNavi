@@ -3,7 +3,7 @@
 // @namespace   de.fischeversenker.uniworx
 // @description Enhanced navigation for UniWorX
 // @include     https://uniworx.ifi.lmu.de/*
-// @version     1.0.5
+// @version     1.0.6
 // @grant       unsafeWindow
 // @require     //ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
 // ==/UserScript==
@@ -86,11 +86,15 @@ var UniWorXNavi = (function($){
 				},
 				696: {
 					title: "Vorlesung Multimedia-Programmierung",
-					actions: ["gruppen", "abgaben"],
+					actions: ["gruppen", "abgaben", "klausuren"],
 				},
 				718: {
 					title: "Interaction Design",
 					actions: ["abgaben", "klausuren"],
+				},
+				726: {
+					title: "Human Factors in Engineering",
+					actions: ["klausuren"]
 				}
 	};
 	// ... .
