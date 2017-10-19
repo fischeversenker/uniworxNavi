@@ -3,7 +3,7 @@
 // @namespace   de.fischeversenker.uniworx
 // @description Enhanced navigation for UniWorX
 // @include     https://uniworx.ifi.lmu.de/*
-// @version     1.0.6
+// @version     1.0.7
 // @grant       unsafeWindow
 // @require     //ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
 // ==/UserScript==
@@ -95,6 +95,18 @@ var UniWorXNavi = (function($){
 				726: {
 					title: "Human Factors in Engineering",
 					actions: ["klausuren"]
+				},
+				751: {
+					title: 'Bachelor-Seminar "Web Technologies"',
+					actions: ['none']
+				},
+				814: {
+					title: 'Blockpraktikum User Experience Design III - (Concept Development)',
+					actions: ['none']
+				},
+				805: {
+					title: 'Kurs Zeichnen und Skizzieren von Szenarien',
+					actions: ['klausuren', 'gruppen']
 				}
 	};
 	// ... .
