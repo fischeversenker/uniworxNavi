@@ -3,7 +3,7 @@
 // @namespace   de.fischeversenker.uniworx
 // @description Enhanced navigation for UniWorX
 // @include     https://uniworx.ifi.lmu.de/*
-// @version     1.0.8
+// @version     1.0.9
 // @grant       unsafeWindow
 // @require     //ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
 // ==/UserScript==
@@ -102,11 +102,19 @@ var UniWorXNavi = (function($){
 				},
 				814: {
 					title: 'Blockpraktikum User Experience Design III - (Concept Development)',
-					actions: ['abgaben']
+					actions: ['abgaben', 'klausuren']
 				},
 				805: {
 					title: 'Kurs Zeichnen und Skizzieren von Szenarien',
 					actions: ['klausuren', 'gruppen']
+				},
+				867: {
+					title: '[ZP] Praktikum Web Programmierung',
+					actions: ['abgaben', 'klausuren']
+				},
+				897: {
+					title: '[PSY] Grundbegriffe der Psychologie für Medieninformatiker',
+					actions: ['klausuren']
 				}
 	};
 	// ... .
